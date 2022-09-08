@@ -7,15 +7,28 @@
     "@sentry/tracing": "^7.12.1",
     "axios": "^0.27.2",
     "bootstrap": "^4.1.2",
-    "react": "^17",
-    "react-dom": "^17",
-    "react-scripts": "1.1.4",
-    "react-toastify": "^9.0.8"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-scripts": "^4.0.0",
+    "react-toastify": "^4.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

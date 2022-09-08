@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import "./App.css";
+
 // We refactor the code and simple wrap the axios in seperate module where we can do further changes.
 import http from "./services/httpService.js";
 // We refactor the code and define a seperate module for our configuration
 import config from "./config.json";
 // We refactor the code and add toast notification
-// import { ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 // /media/hafiz/e6ba97b6-d5c0-46a4-9270-df4f69910003/stuff/React/Section 8- Calling Backend Services/start/http-app/node_modules/react-toastify/dist/ReactToastify.css
 // import "../node_modules/react-toastify/dist/ReactToastify.css";
-// import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 class App extends Component {
   state = {
     posts: [],
@@ -98,7 +98,7 @@ class App extends Component {
           </span>{" "}
           Posts in data Base.
         </h2>
-        {/* <ToastContainer /> */}
+        <ToastContainer />
         <button className="btn btn-primary" onClick={this.handleAdd}>
           Add
         </button>
